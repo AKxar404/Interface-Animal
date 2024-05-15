@@ -13,8 +13,13 @@
             //void eat();
             
         }
+        interface idAnimal
+        {
+            void animalFeature();
+
+        }
         //implementacion de clases
-        class dog : Animal
+        class dog : Animal, idAnimal
         {
              public  void animalType()
             {
@@ -29,9 +34,14 @@
             {
                 Console.WriteLine("* correr");
             }
+            public void animalFeature()
+            {
+                Console.WriteLine("gran capacidad de rastreo");
+                    
+            }
 
         }
-        class cat : Animal
+        class cat : Animal,idAnimal
         {
             public  void animalType()
             {
@@ -46,8 +56,13 @@
             {
                 Console.WriteLine("* agazaparse");
             }
+            public void animalFeature()
+            {
+                Console.WriteLine("agilidad y flexibilidad");
+
+            }
         }
-        class capibara : Animal
+        class capibara : Animal,idAnimal
         {
             public  void animalType()
             {
@@ -62,6 +77,11 @@
             {
                 Console.WriteLine("* se sonroja");
             }
+            public void animalFeature()
+            {
+                Console.WriteLine("amigable con las demas especies");
+
+            }
         }
 
 
@@ -74,6 +94,7 @@
             dogi.animalSound();
             //dogi.sleep();
             dogi.animalAction();
+            dogi.animalFeature();
             //dogi.eat();
             Console.WriteLine("CAT");
             cat cattt = new cat();
@@ -81,6 +102,7 @@
             cattt.animalSound();
             //cattt.sleep();
             cattt.animalAction();
+            cattt.animalFeature();
             //cattt.eat();
             Console.WriteLine("Capibara");
             capibara capi = new capibara();
@@ -88,6 +110,7 @@
             capi.animalSound();
             //capi.sleep();
             capi.animalAction();
+            capi.animalFeature();
             //capi.eat();
 
         }
